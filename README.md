@@ -1,10 +1,12 @@
 # Alkalmazásfejlesztés (VIAUMA09) házi feladat
 
+A csapat neve: 
 Csapattagok (név, neptun kód): aaa (abc123), bbb (def123), ccc (ghi123)
 Leadáshoz videó URL:
 
 Leadáshoz checklist:
 - 24 órával a személyes (vagy online) leadási időpont előtt 24 órával
+  - Fentebb meg van adva a csapattagok neve és Neptun-kódja.
   - Videó elkészítve, benne explicit kitérve minden pontozási szempontra (lásd pontozási szempontok videó elvárásai).
   - A pontozási listában be-X-elve minden pontozási szempont, amivel foglalkoztatok.
   - Github pull request létrehozva, előadó hozzárendelve reviewerként.
@@ -54,22 +56,51 @@ Annak érdekében, hogy az adható visszajelzés minél hasznosabb legyen, javas
 
 - Minden csapattag aktív részvétele a munkában, ami a git commit historyban is látszik (kivéve, ha páros programoztok és ezért a közös commitok egyikőtök nevében készülnek).
 - A forráskód legyen áttekinthető, olvasható, esztétikus. (pl. ne legyen benne hatalmas, kikommentezett forráskód blokk, csomó üres sor egymás után, “teve” és “maci” (vagy szalonképtelen) nevű változó, ne egy óriás cpp fájlban legyen megírva az egész stb.)
+- A kliens programnak C# nyelven, .NET Core alatt kell készülnie, UWP felhasználói felülettel. (A tárgy keretében UWP-vel foglalkozunk, de válaszható WPF is.)
+- A házi feladathoz GIT verziókövetést kell használni a tárgy keretében létrehozott classroom.github.com-os repositoryban.
+- A kliens programnak grafikus felülettel kell rendelkeznie, ami parancsokat tud küldeni és állapotot tud fogadni.
+- A bemutatáskor a felhasználói felületen látszania kell, hogy a beágyazott rendszer reagál a küldött parancsokra.
+- A leadáskor a master branchen lévő (végleges) verzió forduljon és fusson egy Windows 10 alapú gépen, Visual Studio 2019 alatt. Természetesen ha egy igazi robot jelenléte kell neki, akkor nem gond, ha nem működik minden funkció, de induljon el és ezt a tényt esztétikus formában jelezze. A helyes működés pedig a demó videón úgyis látszani fog.
 
-## Normál pontot érő dolgok
+## Pontot érő dolgok
 
-(Minden szempontnál a megadott pont a maximális adható pont, részleges megoldás kevesebb pontot is érhet.)
+Minden szempontnál a megadott pont a maximális adható pont, részleges megoldás kevesebb pontot is érhet. A pótleadáson maximum 50 pont szerezhető.
 
+Architektúra, magas szintű koncepciók
+- [ ] 10p: MVVM architektúra (legalább 3 modell és 3 view model osztállyal) (Videóban: solution explorerben megmutatva a modell és view model osztályokat)
+- [ ] 8p: Többszálúság: Task és async-await használata. (Videóban: forráskódban kiemelve)
+- [ ] 10p: Entity Framework használata
+- [ ] 5p: Hálózati kommunikáció HTTP felett
+  - [ ] +5p: HTTP feletti kommunikációban legalább 3 HTTP ige (get, put, delete, post stb.) használata, REST API kialakítása
 
+Technológiák
+- [ ] 5p: Canvas és Shape használata (Videóban: UI-on megmutatva)
+- [ ] 5p: Adatkötés használata (Videóban: xaml kód)
+- [ ] 10p: Heterogén listához adatkötés (DataTemplateSelector) (Videóban: xaml kód)
+- [ ] 5p: Regex használat nem triviális feladatra (pl. nem Substring helyett) (Videóban: forráskód részlet)
+- [ ] 5p: IValueConverter használata (Videóban: xaml kód)
+- [ ] 5p: ICommand (Videóban: forráskódban az ICommandot implementáló osztály)
+- [ ] 5p: StaticResource használata (Videóban: xaml kód)
+- [ ] 5p: Fájlba mentés és onnan betöltés (az UWP hozzáférési korlátozásokat figyelembe véve) (Videóban: használat közben a UI vagy forráskód részlet)
+- [ ] 5p: Linq használata nem triviális feladatra (query vagy method syntax is lehet) (Videóban: forráskódban kiemelve)
+- [ ] 5p: Sorosítás JSON vagy XML formátumba
+- [ ] 5p: Alapos öntesztelő funkció a robot számára. A tesztet futtathatja a kliens program is, de a robot firmwareje is. A lényeg, hogy van öntesztelési funkció.
 
-
-
-- [ ] DocFX segítségével, XML kommentárokkal generált dokumentáció legalább 3 áttekintő UML diagrammal. A dokumentáció fejlesztői dokumentáció. Olyan mértékben kell, hogy tartalmazza a rendszer működését, hogy abból kiderüljön, hogy egy adott funkció hogy működik és hol található a forráskódban. A repository értelemszerűen tartalmazza a dokumentáció minden forrását is. A DocFX által generált HTML dokumentáció ZIP-elve a github.com release funkciójával letölthető formában kell, hogy elérhető legyen a leadási pull request létrehozásakor. https://github.com/blog/1547-release-your-software 
+Módszertani szempontok
+- [ ] mintánként 5p: A tárgy keretében szereplő tervezési minta használata saját megvalósításban (videóban: forráskódban megmutatva). (Observer csak akkor, ha az esemény kiváltása is saját kód, pl. egy nyomógomb Click eseménykezelőjének megírása még nem elég ehhez.)
+- [ ] 10p: Legalább 20% unit teszt lefedettség (Videóban: unit tesztek lefutnak és zöldek, coverage report 20% feletti számot mutat). Ha kisebb a lefedettség, arányosan kevesebb pontot ér. (UWP alkalmazásra macerás tesztet írni, a tesztelendő osztályokat egy .NET Standard 2.0 projektbe hozzátok létre és azt tudjátok hivatkozni xUnit Test projektből, ha a teszt projekt .NET Core 2.0-át céloz meg.)
+- [ ] 10p: DocFX segítségével, XML kommentárokkal generált dokumentáció legalább 3 áttekintő UML diagrammal. A dokumentáció fejlesztői dokumentáció. Olyan mértékben kell, hogy tartalmazza a rendszer működését, hogy abból kiderüljön, hogy egy adott funkció hogy működik és hol található a forráskódban. A repository értelemszerűen tartalmazza a dokumentáció minden forrását is. A DocFX által generált HTML dokumentáció ZIP-elve a github.com release funkciójával letölthető formában kell, hogy elérhető legyen a leadási pull request létrehozásakor. https://github.com/blog/1547-release-your-software 
 - [ ] 3p: Határidőre leadott pull request az 1. code reviewra, szignifikáns mennyiségű fejlesztéssel.
 - [ ] 2p: Határidőre leadott pull request a 2. code reviewra, szignifikáns mennyiségű fejlesztéssel.
 
-## Bónusz pontot érő dolgok
-Ezek a szempontok csak akkor érnek pontot, ha (1) a normál pontokból legalább 40 pont összegyűlt és (2) bónusz pontot csak a normál leadási időpontban lehet szerezni, a pótleadáson már nem.
 
+További lehetőségek, amik nem részei a tananyagnak, de pontot érnek:
+- 8p: Behaviour használata (nem része a tananyagnak) (Videóban: xaml kód)
+- 8p: Animációk használata (nem része a tananyagnak) (Videóban: UI használat közben vagy xaml kód)
+- 5p: Style használata (nem része a tananyagnak) (Videóban: xaml kód) Az 5 pont saját definiált stílusra vonatkozik, ami legalább 2 propertyt beállít. Előre gyártott stílus használata 1p.
+- 5p: OpenCvSharp használata (Videóban: UI használat közben vagy forráskód részlet)
+
+A felsoroltakon kívüli egyéb technológiák használatáért is lehet pontokat kapni, de hogy az új pontszerzési lehetőségről mindenki időben értesüljön, ezeket legkésőbb az 5. oktatási hétig a tantárgy Teams csoportjában (publikus csatornán) kell kérni az előadótól. (Ennek főleg az a célja, hogy ha valamire nem gondoltam, hogy használni fogjátok, de igen és sok munka, akkor járjon érte plusz pont is.)
 
 ## Mínusz pontok
 
@@ -81,54 +112,11 @@ Van pár alapelvárás, ami pontot nem ér, de ha valaki nem tartja be, az ütk�
 - Ronda forráskód: forráskódban kikommetezett kódrészletek, TODO kommentárok, szalonképtelen változónevek, több üres sor egymás után.
 - A git pull request nem pont a leadandó megoldást tartalmazza. Például a pull request nem az aktuális és félév eleji állapot különbségét mutatja, hanem egy későbbi állapotból indul ki, így sok munka nem szerepel benne.
 
-## Jegymegajánlás
+## 50-nél több pont, jegymegajánlás
 
-Elvileg a házi feladat 50 pontot ér, de főleg a bónusz feladatokkal együtt ennel több pont is gyűjthető, ami ugyanúgy hozzáadódik a féléves pontszámhoz. Amennyiben egy csapat sok többlet pontot szerez (és időben adja le a házi feladatot és nem a pótladáson), amennyiben eléri a 70 pontot, a házi feladatra megajánlott 5-ös adható.
+A házi feladat 50 pontot ér, de a normál házi feladat leadási időpontban ennél több pont is gyűjthető a pontozási szempontok alapján, ami ugyanúgy hozzáadódik a féléves pontszámhoz. (A pótleadáson max. 50 pont szerezhető).  Amennyiben egy csapat eléri a 70 pontot, a házi feladatra megajánlott 5-ös adható.
 
-# ----------------------------------- korábbi
-(Megajánlás 70 ponttól!)
-
-
-
-
-Házi feladat pontozási szempontok
-Alap esetben a minimális és alap feladatokat kell teljesíteni és azok alapján történik a pontozás. Amennyiben valaki időben (nem késedelmesen) leadja a házi feladatot, akkor kaphat plusz pontokat a bónusz kategóriából, de csak akkor, ha az alap feladatokból (max. 40p) legalább 30 pontot elért. 
-
-Minimális feladatok (e nélkül a házi feladat értékelhetetlen és nem ér pontot, valamint az aláírásnak is előfeltétele):
-A kliens programnak C++-ban, Qt és QML-ben kell készülnie, GIT verziókövetéssel a tárgy keretében létrehozott classroom.github.com-os repositoryban. Bár a qmake és gcc toolchainnel foglalkozunk az előadáson és így erre van támogatás, a Visual Studio alapú toolchain is elfogadható.
-Grafikus felülettel kell rendelkeznie, ami parancsokat tud küldeni és állapotot tud fogadni a robottól vagy egy szimulátortól.
-A szimulátorral TCP socketen, soros porton vagy bluetoothon keresztül kell kommunikálnia.
-Egy parancs kiadására (pl. start) a visszakapott adatokból egyértelműen látszania kell, hogy a robot (igazi vagy szimulált) tényleg elindult. (Például a motoráram megnő, változik a pozíció stb.)
-A leadáskor a master branchen lévő verzió forduljon és fusson egy Windows 10 vagy Ubuntu virtuális gépen. Természetesen ha egy igazi robot jelenléte kell neki, akkor nem gond, ha nem működik minden funkció, de induljon el és ezt a tényt esztétikus formában jelezze. A helyes működés pedig a demó videón úgyis látszani fog.
-
-Alap feladatok (max.40 pont):
-Az aktuális állapot szövegesen és a vektor érték(ek) esetében grafikusan is jelenjen meg.
-A korábbi állapotok szövegesen és grafikusan jelenjenek meg (redundancia nem kell, minden úgy jelenjen meg, ahogy logikusabb, csak legyen szöveges és grafikus is).
-Az alkalmazás felhasználói felülete ne hasonlítson kísértetiesen a SimpleTelemetryVisualizer minta alkalmazáséra. (Pl. legyen felülnézeti “térkép”, más színek, más elrendezés, polárkoordinátás megjelenítés, zoomolható diagram stb.)
-Az alkalmazás használja a Qt signals and slots mechanizmusát legalább egy olyan helyen is, ami a SimpleTelemetryVisualizerben nem szerepel.
-A dokumentáció készüljön a forráskód alapján (kiegészítve egyéb fájlokkal) Doxygen segítségével. A generált HTML verziót a github “release” funkciójával kell letölthetővé tenni.
-A dokumentációban legyen legalább 1 UML class diagram és legalább 1 UML szekvencia diagram. (Itt nem a Doxygen által automatikusan generált UML diagramokra gondolok, hanem saját készítésű, áttekintő diagramokra, amin azok az osztályok szerepelnek, ami a magyarázathoz ott éppen indokolt.)
-A kliens program felhasználói felülete legyen esztétikus. Például az ablakot átméretezve ne essen szét az egész, hanem kövesse az átméretezést.
-A GIT repositoryban látszódjanak a fejlesztés során készült commitok, vagyis ne egyetlen commit rakja be a kész programot a repositoryba a munka legvégén. A commitok ne szélsőségesen csak egy csapattagtól származzanak. A commit megjegyzések legyenek kifejezőek.
-
-Bónusz pontok:
-6p: Alapos öntesztelő funkció a robot számára. A tesztet futtathatja a kliens program is, de a robot firmwareje is. A lényeg, hogy van öntesztelési funkció.
-3p: A dokumentáció számos (5+) UML diagramot használ, a leírások kihasználják a Markdown lehetőségeit, valamint a dokumentációban vannak hivatkozások, @see, @warning stb. parancsok.
-3p: QTest unit teszt, legalább 3 eltérő (nem triviális) test case.
-5p: A fejlesztés során tapasztalt tanulságok részletes összefoglalása egy publikálható jegyzet (“snippet”) formájában, githubon pull request formájában leadva. Erre példát a snippet oldalon az előző félév hasonló összefoglalói között találhat: http://bmeaut.github.io/snippets/snippets/AlkFejlHfTanulsagok/alkfejlhf/ 
-(Ennek határideje is a házi feladat leadási határideje. Lásd még lejjebb az ellenőrzési listát!)
-
-Néhány minta demó videó (az érintett csapatok beleegyezésével):
+Néhány minta demó videó (az érintett csapatok beleegyezésével), bár ezeknél még Qt/C++ volt a platform:
 https://drive.google.com/drive/folders/0B4jF_XaQKmkuUm9XRWVRRGRxNjg?usp=sharing
 https://www.youtube.com/watch?v=DFJsDSGP1IQ&ab_channel=GyulaSzab%C3%B3
 
-Leadás előtti ellenőrzési lista, hogy ne maradjon le semmi:
-A végleges verzió a master branchen van.
-A docs/borito.md a helyén van és ki van töltve, benne a megosztott videó URL-jével.
-A git repositoryban nincsen fordítási eredmény (pl. build vagy bin vagy obj könyvtár, vagy a Doxygen html kimenete)
-A release elkészült és bináris csatolmányként fel van hozzá töltve a Doxygen kiemenete (a html könyvtár) egy zip-ben.
-
-Snippet készítés esetén az ellenőrzési lista:
-A snippet könyvtára a snippets\AlkFejlHfTanulsagok\##\", ahol ## a sorszáma. Mivel több készül párhuzamosan, előre kérjetek egy egyedi sorszámot Kristóftól, hogy ne legyen ütközés.
-A sorszám szerepel az index.md fejlécében is “codename: AlkFelHf##” formában.
-A pull requestet a https://github.com/bmeaut/snippets repository gh-pages branchére küldtétek, vagyis oda akarjátok mergelni (és nem a masterre, mert a webes felületen nem az jelenik meg).
