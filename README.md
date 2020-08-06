@@ -3,6 +3,10 @@
 A csapat neve: 
 Csapattagok (név, neptun kód): aaa (abc123), bbb (def123), ccc (ghi123)
 Leadáshoz videó URL:
+A videó későbbi evfolyamok számára bemutatható/felhasználható videó vágásra?
+- [x] Igen, névtelenül
+- [ ] Igen, szerzőket megnevezve
+- [ ] Nem
 
 Leadáshoz checklist:
 - 24 órával a személyes (vagy online) leadási időpont előtt 24 órával
@@ -83,8 +87,9 @@ Technológiák
 - [ ] 5p: StaticResource használata (Videóban: xaml kód)
 - [ ] 5p: Fájlba mentés és onnan betöltés (az UWP hozzáférési korlátozásokat figyelembe véve) (Videóban: használat közben a UI vagy forráskód részlet)
 - [ ] 5p: Linq használata nem triviális feladatra (query vagy method syntax is lehet) (Videóban: forráskódban kiemelve)
-- [ ] 5p: Sorosítás JSON vagy XML formátumba
-- [ ] 5p: Alapos öntesztelő funkció a robot számára. A tesztet futtathatja a kliens program is, de a robot firmwareje is. A lényeg, hogy van öntesztelési funkció.
+- [ ] 5p: Sorosítás JSON vagy XML formátumba (Videóban: generált XML/JSON felvillantása)
+- [ ] 5p: Alapos öntesztelő funkció a robot számára. A tesztet futtathatja a kliens program is, de a robot firmwareje is. A lényeg, hogy van öntesztelési funkció. (Videóban: futás közben bemutatva)
+- [ ] 10p: grafikon megjelenítő package (pl. oxyplot) használata nem csak alapbeállításokkal (Videóban: UI-on megmutatva)
 
 Módszertani szempontok
 - [ ] mintánként 5p: A tárgy keretében szereplő tervezési minta használata saját megvalósításban (videóban: forráskódban megmutatva). (Observer csak akkor, ha az esemény kiváltása is saját kód, pl. egy nyomógomb Click eseménykezelőjének megírása még nem elég ehhez.)
@@ -93,12 +98,14 @@ Módszertani szempontok
 - [ ] 3p: Határidőre leadott pull request az 1. code reviewra, szignifikáns mennyiségű fejlesztéssel.
 - [ ] 2p: Határidőre leadott pull request a 2. code reviewra, szignifikáns mennyiségű fejlesztéssel.
 
-
 További lehetőségek, amik nem részei a tananyagnak, de pontot érnek:
-- 8p: Behaviour használata (nem része a tananyagnak) (Videóban: xaml kód)
-- 8p: Animációk használata (nem része a tananyagnak) (Videóban: UI használat közben vagy xaml kód)
-- 5p: Style használata (nem része a tananyagnak) (Videóban: xaml kód) Az 5 pont saját definiált stílusra vonatkozik, ami legalább 2 propertyt beállít. Előre gyártott stílus használata 1p.
-- 5p: OpenCvSharp használata (Videóban: UI használat közben vagy forráskód részlet)
+- [] 8p: Behaviour használata (nem része a tananyagnak) (Videóban: xaml kód)
+- [] 8p: Animációk használata (nem része a tananyagnak) (Videóban: UI használat közben vagy xaml kód)
+- [] 5p: Style használata (nem része a tananyagnak) (Videóban: xaml kód) Az 5 pont saját definiált stílusra vonatkozik, ami legalább 2 propertyt beállít. Előre gyártott stílus használata 1p.
+- [] 5p: OpenCvSharp használata (Videóban: UI használat közben vagy forráskód részlet)
+- [] 3p: Statikus kódelemző használata a fejlesztés során (Videóban: az elemző visszajelzéseinek felvillantása)
+
+Ha nincs ötleted, hogy egy szempontot hogyan lehetne a feladatodba integrálni, tedd fel a kérdést a Teams nyilvános csatornájában és beszéljünk róla!
 
 A felsoroltakon kívüli egyéb technológiák használatáért is lehet pontokat kapni, de hogy az új pontszerzési lehetőségről mindenki időben értesüljön, ezeket legkésőbb az 5. oktatási hétig a tantárgy Teams csoportjában (publikus csatornán) kell kérni az előadótól. (Ennek főleg az a célja, hogy ha valamire nem gondoltam, hogy használni fogjátok, de igen és sok munka, akkor járjon érte plusz pont is.)
 
