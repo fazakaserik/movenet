@@ -1,8 +1,10 @@
 # Alkalmazásfejlesztés (VIAUMA09) házi feladat
 
-A csapat neve: 
-Csapattagok (név, neptun kód): aaa (abc123), bbb (def123), ccc (ghi123)
-Leadáshoz videó URL:
+Alapadatok:
+- A csapat neve:
+- Csapattagok (név, neptun kód): aaa (abc123), bbb (def123), ccc (ghi123)
+- Leadáshoz videó URL:
+
 A videó későbbi evfolyamok számára bemutatható/felhasználható videó vágásra?
 - [x] Igen, névtelenül
 - [ ] Igen, szerzőket megnevezve
