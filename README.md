@@ -101,11 +101,11 @@ Módszertani szempontok
 - [ ] 2p: Határidőre leadott pull request a 2. code reviewra, szignifikáns mennyiségű fejlesztéssel.
 
 További lehetőségek, amik nem részei a tananyagnak, de pontot érnek:
-- [] 8p: Behaviour használata (nem része a tananyagnak) (Videóban: xaml kód)
-- [] 8p: Animációk használata (nem része a tananyagnak) (Videóban: UI használat közben vagy xaml kód)
-- [] 5p: Style használata (nem része a tananyagnak) (Videóban: xaml kód) Az 5 pont saját definiált stílusra vonatkozik, ami legalább 2 propertyt beállít. Előre gyártott stílus használata 1p.
-- [] 5p: OpenCvSharp használata (Videóban: UI használat közben vagy forráskód részlet)
-- [] 3p: Statikus kódelemző használata a fejlesztés során (Videóban: az elemző visszajelzéseinek felvillantása)
+- [ ] 8p: Behaviour használata (nem része a tananyagnak) (Videóban: xaml kód)
+- [ ] 8p: Animációk használata (nem része a tananyagnak) (Videóban: UI használat közben vagy xaml kód)
+- [ ] 5p: Style használata (nem része a tananyagnak) (Videóban: xaml kód) Az 5 pont saját definiált stílusra vonatkozik, ami legalább 2 propertyt beállít. Előre gyártott stílus használata 1p.
+- [ ] 5p: OpenCvSharp használata (Videóban: UI használat közben vagy forráskód részlet)
+- [ ] 3p: Statikus kódelemző használata a fejlesztés során (Videóban: az elemző visszajelzéseinek felvillantása)
 
 Ha nincs ötleted, hogy egy szempontot hogyan lehetne a feladatodba integrálni, tedd fel a kérdést a Teams nyilvános csatornájában és beszéljünk róla!
 
@@ -119,7 +119,6 @@ Van pár alapelvárás, ami pontot nem ér, de ha valaki nem tartja be, az ütk�
 - Generált fájlok (fordítási eredmények, exe, generált dokumentáció) a git repositoryban
 - A beadott verzió nem a master ágon van.
 - Ronda forráskód: forráskódban kikommetezett kódrészletek, TODO kommentárok, szalonképtelen változónevek, több üres sor egymás után.
-- A git pull request nem pont a leadandó megoldást tartalmazza. Például a pull request nem az aktuális és félév eleji állapot különbségét mutatja, hanem egy későbbi állapotból indul ki, így sok munka nem szerepel benne.
 
 ## 50-nél több pont, jegymegajánlás
 
