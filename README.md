@@ -15,7 +15,7 @@ Leadáshoz checklist:
   - Fentebb meg van adva a csapattagok neve és Neptun-kódja.
   - Videó elkészítve, benne explicit kitérve minden pontozási szempontra (lásd pontozási szempontok videó elvárásai).
   - A pontozási listában be-X-elve minden pontozási szempont, amivel foglalkoztatok.
-  - Github pull request létrehozva, előadó hozzárendelve reviewerként.
+  - A végleges verzió a master ágon van.
   - Amennyiben online időpont foglalásos bemutatás van, az időpontot le van foglalva a csapat számára.
 
 # A házi feladat kiírása
@@ -38,12 +38,11 @@ A házi feladat célja egy diagnosztikai kliens program elkészítése egy szimu
 A házi feladatot leadni a 14. oktatási héten kell, 2 lépésben.
 - A személyes (vagy online) leadási időpont előtt 24 órával le kell adni
   - Egy max. 5 perces screen capture (vagy más módon elkészített) videót a megoldásról. (Ennek célja, hogy a leadáskor ne kelljen minden funkciót végignézni, hanem koncentrálhassunk az érdekesekre. Ezen kívül hogy ne kelljen azon aggódni, hogy például a robot éppen menni fog-e, ne kelljen hozzá feltétlenül speciális tesztpálya.) A pontozási szempontok mindegyikének explicit szerepelnie kell a videóban, a pontozási szempontnál megadott formában. A videó URL-jét ennek a fájlnak az elején kell megadni és egy böngészőben további telepítések nélkül lejátszhatónak kell lennie (pl. youtube vagy google drive megosztás).
-  - Be kell adni egy github.com pull requestet, benne reviewerként megjelölve a tárgyfelelőst.
   - A megoldásnak a repository master ágán kell lennie.
   - A leadott verzióban ebben a README.md fájlban minden olyan pontozási szempontot be kell X-elni, amire szeretnétek pontot kapni.
 - A leadási időpontban személyes vagy online leadást fogunk szervezni (járványügyi szempontok függvényében), amikor megnézzük a megoldás érdekesebb részleteit és egyeztetjük a kapott pontszámot. A RobonAUT robothoz kapcsolódó megoldások kedvéért ezen az alkalmon rendelkezésre áll majd egy tesztpálya, melyen egyúttal a robotokat is lehet tesztelni, miközben megnézzük a kliens programok működését. (A leadáshoz egy saját notebookot kell hozni. Ha ez akadályba ütközik, előre jelezzétek és megoldjuk egy gépteremben.)
 
-Azoknak a csapatoknak, melyeknek a fenti leadásokat nem sikerül határidőre teljesíteni, a pótlási héten lesz lehetőség pótleadásra, ugyanígy 2 lépésben. (A fenti 1. lépés késedelmes teljesítése esetén már csak a pótleadáson lehet leadni a házi feladatot, mivel a találkozó előtt át kell tudunk nézni az előre leadott anyagokat.)
+Azoknak a csapatoknak, melyeknek a fenti leadásokat nem sikerül határidőre teljesíteni, a pótlási héten lesz lehetőség pótleadásra, ugyanígy 2 lépésben. (A fenti 1. lépés késedelmes teljesítése esetén már csak a pótleadáson lehet leadni a házi feladatot, mivel a találkozó előtt át kell tudni nézni az előre leadott anyagokat.)
 
 A konkrét 14. és pótlási heti időpontokat novemberben hirdetjük ki.
 A félév vége és a RobonAUT verseny után (bőven hagyva időt) a kiadott repositorykat törölni fogjuk, így a verseny után érdemes egy véglegesebb repositoryt létrehozni és oda is pusholni.
@@ -66,7 +65,7 @@ Annak érdekében, hogy az adható visszajelzés minél hasznosabb legyen, javas
 - A házi feladathoz GIT verziókövetést kell használni a tárgy keretében létrehozott classroom.github.com-os repositoryban.
 - A kliens programnak grafikus felülettel kell rendelkeznie, ami parancsokat tud küldeni és állapotot tud fogadni.
 - A bemutatáskor a felhasználói felületen látszania kell, hogy a beágyazott rendszer reagál a küldött parancsokra.
-- A leadáskor a master branchen lévő (végleges) verzió forduljon és fusson egy Windows 10 alapú gépen, Visual Studio 2019 alatt. Természetesen ha egy igazi robot jelenléte kell neki, akkor nem gond, ha nem működik minden funkció, de induljon el és ezt a tényt esztétikus formában jelezze. A helyes működés pedig a demó videón úgyis látszani fog.
+- A leadáskor a master branchen lévő (végleges) verzió forduljon és működjön egy Windows 10 alapú gépen, Visual Studio 2019 alatt. Természetesen ha egy igazi robot jelenléte kell neki, akkor nem gond, ha nem működik minden funkció, de induljon el és ezt a tényt esztétikus formában jelezze. A helyes működés pedig a demó videón úgyis látszani fog.
 
 ## Pontot érő dolgok
 
@@ -118,10 +117,10 @@ A felsoroltakon kívüli egyéb technológiák használatáért is lehet pontoka
 
 Van pár alapelvárás, ami pontot nem ér, de ha valaki nem tartja be, az ütközik a tantárgy munkafolyamataival és ezért mínusz pontot ér. Kérünk mindenkit, hogy figyeljen a formai kérésekre is és ezekre a retorziókra ne legyen szükség... sajnos ezt korábbi számos rossz tapasztalat miatt kellett bevezetni.
 
-- Videó hossza több, mint 5 perc.
-- Generált fájlok (fordítási eredmények, exe, generált dokumentáció) a git repositoryban
-- A beadott verzió nem a master ágon van.
-- Ronda forráskód: forráskódban kikommetezett kódrészletek, TODO kommentárok, szalonképtelen változónevek, több üres sor egymás után.
+- Videó hossza több, mint 5 perc (vagy több videó készül): -5p
+- Generált fájlok (fordítási eredmények, exe, generált dokumentáció) a git repositoryban: -3p
+- A beadott verzió nem a master ágon van: -5p
+- Ronda forráskód: forráskódban kikommetezett kódrészletek, TODO kommentárok, szalonképtelen változónevek, több üres sor egymás után: -3p
 
 ## 50-nél több pont, jegymegajánlás
 
