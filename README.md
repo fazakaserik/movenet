@@ -65,7 +65,7 @@ Annak érdekében, hogy az adható visszajelzés minél hasznosabb legyen, javas
 - A házi feladathoz GIT verziókövetést kell használni a tárgy keretében létrehozott classroom.github.com-os repositoryban.
 - A kliens programnak grafikus felülettel kell rendelkeznie, ami parancsokat tud küldeni és állapotot tud fogadni.
 - A bemutatáskor a felhasználói felületen látszania kell, hogy a beágyazott rendszer reagál a küldött parancsokra.
-- A leadáskor a master branchen lévő (végleges) verzió forduljon és működjön egy Windows 10 alapú gépen, Visual Studio 2019 alatt. Természetesen ha egy igazi robot jelenléte kell neki, akkor nem gond, ha nem működik minden funkció, de induljon el és ezt a tényt esztétikus formában jelezze. A helyes működés pedig a demó videón úgyis látszani fog.
+- A leadáskor a master branchen lévő (végleges) verzió forduljon és működjön egy Windows 10 alapú gépen, Visual Studio 2022 alatt. Természetesen ha egy igazi robot jelenléte kell neki, akkor nem gond, ha nem működik minden funkció, de induljon el és ezt a tényt esztétikus formában jelezze. A helyes működés pedig a demó videón úgyis látszani fog.
 
 ## Pontot érő dolgok
 
