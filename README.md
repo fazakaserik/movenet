@@ -126,5 +126,3 @@ Van pár alapelvárás, ami pontot nem ér, de ha valaki nem tartja be, az ütk�
 
 A házi feladat 50 pontot ér, de a normál házi feladat leadási időpontban ennél több pont is gyűjthető a pontozási szempontok alapján, ami ugyanúgy hozzáadódik a féléves pontszámhoz. (A pótleadáson max. 50 pont szerezhető).  Amennyiben egy csapat eléri a 70 pontot, a házi feladatra megajánlott 5-ös adható.
 
-Néhány minta demó videó (az érintett csapatok beleegyezésével), bár ezeknél még Qt/C++ volt a platform:
-https://drive.google.com/drive/folders/0B4jF_XaQKmkuUm9XRWVRRGRxNjg
