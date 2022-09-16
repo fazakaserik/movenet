@@ -24,7 +24,7 @@ A házi feladat célja egy diagnosztikai kliens program elkészítése egy szimu
 
 ## Jelentkezés módja
 
-- A házi feladat elkészítése 3 fős csapatokban történik. Jelentkezni a 3. oktatási hét végéig kell az alábbi módon:
+- A házi feladat elkészítése 3 fős csapatokban történik. Jelentkezni legkésőb a 6. oktatási hét végéig kell az alábbi módon:
   - Moodle alatt az erre vonatkozó kérdőíven mindenkinek meg kell adni, hogy melyik csapatban van (mi a csapatneve).
   - A classroom.github.com rendszerben létre kell hozni a csapatot és a tagoknak be kell lépnie. Így mindenki megkapja a házi feladat elkészítésére szánt (private) repositoryt. Ehhez a meghívó URL a Moodle alatt érhető majd el.
 
