@@ -69,7 +69,7 @@ Annak érdekében, hogy az adható visszajelzés minél hasznosabb legyen, javas
 
 ## Pontot érő dolgok
 
-Minden szempontnál a megadott pont a maximális adható pont, részleges megoldás kevesebb pontot is érhet. A pótleadáson maximum 50 pont szerezhető.
+Minden szempontnál a megadott pont a maximális adható pont, részleges megoldás kevesebb pontot is érhet. A pótleadáson maximum 50 pont szerezhető. 2 fős csapatok 1.3-as szorzót kapnak a pontokra (azért nem +50%, mert a csapaton belüli koordináció könnyebb 2 fővel), 4 fős csapatok 0.75-ös szorzót.
 
 Architektúra, magas szintű koncepciók
 - [ ] 10p: MVVM architektúra (legalább 3 modell és 3 view model osztállyal) (Videóban: solution explorerben megmutatva a modell és view model osztályokat)
