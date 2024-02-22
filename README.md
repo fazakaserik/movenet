@@ -45,7 +45,6 @@ A házi feladatot leadni a 14. oktatási héten kell, 2 lépésben.
 Azoknak a csapatoknak, melyeknek a fenti leadásokat nem sikerül határidőre teljesíteni, a pótlási héten lesz lehetőség pótleadásra, ugyanígy 2 lépésben. (A fenti 1. lépés késedelmes teljesítése esetén már csak a pótleadáson lehet leadni a házi feladatot, mivel a találkozó előtt át kell tudni nézni az előre leadott anyagokat.)
 
 A konkrét 14. és pótlási heti időpontokat novemberben hirdetjük ki.
-A félév vége és a RobonAUT verseny után (bőven hagyva időt) a kiadott repositorykat törölni fogjuk, így a verseny után érdemes egy véglegesebb repositoryt létrehozni és oda is pusholni.
 
 ## Köztes code reviewk
 
@@ -61,11 +60,11 @@ Annak érdekében, hogy az adható visszajelzés minél hasznosabb legyen, javas
 
 - Minden csapattag aktív részvétele a munkában, ami a git commit historyban is látszik (kivéve, ha páros programoztok és ezért a közös commitok egyikőtök nevében készülnek).
 - A forráskód legyen áttekinthető, olvasható, esztétikus. (pl. ne legyen benne hatalmas, kikommentezett forráskód blokk, csomó üres sor egymás után, “teve” és “maci” (vagy szalonképtelen) nevű változó, ne egy óriás cpp fájlban legyen megírva az egész stb.)
-- A kliens programnak C# nyelven, .NET Core alatt kell készülnie, UWP felhasználói felülettel. (A tárgy keretében UWP-vel foglalkozunk, de válaszható WPF is.)
+- A kliens programnak C# nyelven, .NET Core alatt kell készülnie, UWP felhasználói felülettel. (A tárgy keretében MAUI-vel foglalkozunk, de válaszható WPF vagy WinUI3 is.)
 - A házi feladathoz GIT verziókövetést kell használni a tárgy keretében létrehozott classroom.github.com-os repositoryban.
 - A kliens programnak grafikus felülettel kell rendelkeznie, ami parancsokat tud küldeni és állapotot tud fogadni.
 - A bemutatáskor a felhasználói felületen látszania kell, hogy a beágyazott rendszer reagál a küldött parancsokra.
-- A leadáskor a master branchen lévő (végleges) verzió forduljon és működjön egy Windows 10 alapú gépen, Visual Studio 2022 alatt. Természetesen ha egy igazi robot jelenléte kell neki, akkor nem gond, ha nem működik minden funkció, de induljon el és ezt a tényt esztétikus formában jelezze. A helyes működés pedig a demó videón úgyis látszani fog.
+- A leadáskor a master branchen lévő (végleges) verzió forduljon és működjön egy Windows 10-11 alapú gépen, Visual Studio 2022 alatt. Természetesen ha egy igazi robot jelenléte kell neki, akkor nem gond, ha nem működik minden funkció, de induljon el és ezt a tényt esztétikus formában jelezze. A helyes működés pedig a demó videón úgyis látszani fog.
 
 ## Pontot érő dolgok
 
@@ -88,7 +87,7 @@ Technológiák
 - [ ] 5p: IValueConverter használata (Videóban: xaml kód)
 - [ ] 5p: ICommand (Videóban: forráskódban az ICommandot implementáló osztály)
 - [ ] 5p: StaticResource használata (Videóban: xaml kód)
-- [ ] 5p: Fájlba mentés és onnan betöltés (az UWP hozzáférési korlátozásokat figyelembe véve) (Videóban: használat közben a UI vagy forráskód részlet)
+- [ ] 5p: Fájlba mentés és onnan betöltés (Videóban: használat közben a UI vagy forráskód részlet)
 - [ ] 5p: Linq használata nem triviális feladatra (query vagy method syntax is lehet) (Videóban: forráskódban kiemelve)
 - [ ] 5p: Sorosítás JSON vagy XML formátumba (Videóban: generált XML/JSON felvillantása). A sorosításnál saját típust olvassatok be vagy írjatok ki, vagyis ne egy JsonObject-et töltsetek be, amiből aztán kézzel kiszeditek az adatokat. Azzal nem használjátok ki a sorosítás igazi erejét!
 - [ ] 5p: Alapos öntesztelő funkció a robot számára. A tesztet futtathatja a kliens program is, de a robot firmwareje is. A lényeg, hogy van öntesztelési funkció. (Videóban: futás közben bemutatva)
@@ -122,7 +121,7 @@ Van pár alapelvárás, ami pontot nem ér, de ha valaki nem tartja be, az ütk�
 - Videó hossza több, mint 5 perc (vagy több videó készül): -5p
 - Generált fájlok (fordítási eredmények, exe, generált dokumentáció) a git repositoryban: -3p
 - A beadott verzió nem a master ágon van: -5p
-- Ronda forráskód: forráskódban kikommetezett kódrészletek, TODO kommentárok, szalonképtelen változónevek, több üres sor egymás után: -3p
+- Nagyon csúnya forráskód: forráskódban kikommetezett kódrészletek, TODO kommentárok, szalonképtelen változónevek, több üres sor egymás után: -3p
 
 ## 50-nél több pont, jegymegajánlás
 
