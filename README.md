@@ -24,7 +24,7 @@ A házi feladat célja egy diagnosztikai kliens program elkészítése egy szimu
 
 ## Jelentkezés módja
 
-- A házi feladat elkészítése 3 fős csapatokban történik. Jelentkezni legkésőb a 6. oktatási hét végéig kell az alábbi módon:
+- A házi feladat elkészítése 3 fős csapatokban történik. Jelentkezni legkésőbb a 6. oktatási hét végéig kell az alábbi módon:
   - Moodle alatt az erre vonatkozó kérdőíven mindenkinek meg kell adni, hogy melyik csapatban van (mi a csapatneve).
   - A classroom.github.com rendszerben létre kell hozni a csapatot és a tagoknak be kell lépnie. Így mindenki megkapja a házi feladat elkészítésére szánt (private) repositoryt. Ehhez a meghívó URL a Moodle alatt érhető majd el.
 
@@ -40,7 +40,7 @@ A házi feladatot leadni a 14. oktatási héten kell, 2 lépésben.
   - Egy max. 5 perces screen capture (vagy más módon elkészített) videót a megoldásról. (Ennek célja, hogy a leadáskor ne kelljen minden funkciót végignézni, hanem koncentrálhassunk az érdekesekre. Ezen kívül hogy ne kelljen azon aggódni, hogy például a robot éppen menni fog-e, ne kelljen hozzá feltétlenül speciális tesztpálya.) A pontozási szempontok mindegyikének explicit szerepelnie kell a videóban, a pontozási szempontnál megadott formában. A videó URL-jét ennek a fájlnak az elején kell megadni és egy böngészőben további telepítések nélkül lejátszhatónak kell lennie (pl. youtube vagy google drive megosztás). A videót ne 4K-s felbontáson készítsétek (vagy dual monitort felvéve), mert kisebb kijelzőn nézve olvashatatlan lesz a forráskód.
   - A megoldásnak a repository master ágán kell lennie.
   - A leadott verzióban ebben a README.md fájlban minden olyan pontozási szempontot be kell X-elni, amire szeretnétek pontot kapni.
-- A leadási időpontban személyes vagy online leadást fogunk szervezni (járványügyi szempontok függvényében), amikor megnézzük a megoldás érdekesebb részleteit és egyeztetjük a kapott pontszámot. A RobonAUT robothoz kapcsolódó megoldások kedvéért ezen az alkalmon rendelkezésre áll majd egy tesztpálya, melyen egyúttal a robotokat is lehet tesztelni, miközben megnézzük a kliens programok működését. (A leadáshoz egy saját notebookot kell hozni. Ha ez akadályba ütközik, előre jelezzétek és megoldjuk egy gépteremben.)
+- A leadási időpontban személyes vagy online leadást fogunk szervezni, amikor megnézzük a megoldás érdekesebb részleteit és egyeztetjük a kapott pontszámot. (Jelenléti leadás esetén egy saját notebookot kell hozni. Ha ez akadályba ütközik, előre jelezzétek és megoldjuk egy gépteremben.)
 
 Azoknak a csapatoknak, melyeknek a fenti leadásokat nem sikerül határidőre teljesíteni, a pótlási héten lesz lehetőség pótleadásra, ugyanígy 2 lépésben. (A fenti 1. lépés késedelmes teljesítése esetén már csak a pótleadáson lehet leadni a házi feladatot, mivel a találkozó előtt át kell tudni nézni az előre leadott anyagokat.)
 
@@ -60,7 +60,7 @@ Annak érdekében, hogy az adható visszajelzés minél hasznosabb legyen, javas
 
 - Minden csapattag aktív részvétele a munkában, ami a git commit historyban is látszik (kivéve, ha páros programoztok és ezért a közös commitok egyikőtök nevében készülnek).
 - A forráskód legyen áttekinthető, olvasható, esztétikus. (pl. ne legyen benne hatalmas, kikommentezett forráskód blokk, csomó üres sor egymás után, “teve” és “maci” (vagy szalonképtelen) nevű változó, ne egy óriás cpp fájlban legyen megírva az egész stb.)
-- A kliens programnak C# nyelven, .NET Core alatt kell készülnie, UWP felhasználói felülettel. (A tárgy keretében MAUI-vel foglalkozunk, de válaszható WPF vagy WinUI3 is.)
+- A kliens programnak C# nyelven, .NET Core alatt kell készülnie, MAUI felhasználói felülettel. (A tárgy keretében MAUI-vel foglalkozunk, de válaszható WPF vagy WinUI3 is.)
 - A házi feladathoz GIT verziókövetést kell használni a tárgy keretében létrehozott classroom.github.com-os repositoryban.
 - A kliens programnak grafikus felülettel kell rendelkeznie, ami parancsokat tud küldeni és állapotot tud fogadni.
 - A bemutatáskor a felhasználói felületen látszania kell, hogy a beágyazott rendszer reagál a küldött parancsokra.
