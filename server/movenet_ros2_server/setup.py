@@ -20,7 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'movenet_node = movenet_ros2_server.movenet_node:main'
+            'grpc_server = scripts.grpc_server:main'
         ],
     },
 )
