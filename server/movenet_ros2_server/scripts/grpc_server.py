@@ -19,19 +19,19 @@ class MinimalSubscriber(Node):
         self.get_logger().info(f"x={msg.position[0]}\ty={msg.position[1]}\tz={msg.position[2]}")
 
 
-def main(args=None):
-    rclpy.init(args=args)
+    def main(args=None):
+        rclpy.init(args=args)
 
-    minimal_subscriber = MinimalSubscriber()
+        minimal_subscriber = MinimalSubscriber()
 
-    rclpy.spin(minimal_subscriber)
+        rclpy.spin(minimal_subscriber)
 
-    # Destroy the node explicitly
-    # (optional - otherwise it will be done automatically
-    # when the garbage collector destroys the node object)
-    minimal_subscriber.destroy_node()
-    rclpy.shutdown()
+        # Destroy the node explicitly
+        # (optional - otherwise it will be done automatically
+        # when the garbage collector destroys the node object)
+        minimal_subscriber.destroy_node()
+        rclpy.shutdown()
 
 
-if __name__ == '__main__':
-    main()
+    if __name__ == '__main__':
+        main()
