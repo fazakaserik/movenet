@@ -6,10 +6,10 @@ from sensor_msgs.msg import JointState
 
 from concurrent import futures
 import grpc
-from ..grpc import movenet_pb2
-from ..grpc import movenet_pb2_grpc
+from generated import movenet_pb2
+from generated import movenet_pb2_grpc
 
-class MovenetServer(movenet_pb2.MovenetService):
+class MovenetServer(movenet_pb2_grpc.MovenetServiceServicer):
     def StreamJointStates(self, request_iterator, context):
         # This is just an example implementation
         for request in request_iterator:
@@ -39,14 +39,16 @@ class MinimalSubscriber(Node):
     def listener_callback(self, msg: JointState):
         self.get_logger().info(f"x={msg.position[0]}\ty={msg.position[1]}\tz={msg.position[2]}")
 
-def serve():
+def main():
+    print(grpc.__file__)
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
-    movenet_pb2_grpc.add_MovenetServiceServicer_to_server(movenet_pb2.MovenetService(), server)
+    movenet_pb2_grpc.add_MovenetServiceServicer_to_server(movenet_pb2_grpc.MovenetServiceServicer(), server)
     server.add_insecure_port('[::]:50051')
+    print("Starting MoveNET Server on 127.0.0.1:50051")
     server.start()
     server.wait_for_termination()
 
-def main(args=None):
+def main2(args=None):
     rclpy.init(args=args)
 
     minimal_subscriber = MinimalSubscriber()
