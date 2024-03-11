@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+import "google/protobuf/empty.proto";
+
 package movenet;
 
 message JointStateRequest {
@@ -26,5 +28,5 @@ message JointStateMessage {
 
 service MovenetService {
   // A server-to-client streaming RPC to stream JointStates
-  rpc StreamJointStates(stream JointStateRequest) returns (stream JointStateMessage);
+  rpc StreamJointStates(google.protobuf.Empty) returns (stream JointStateMessage);
 }

@@ -6,13 +6,14 @@ from sensor_msgs.msg import JointState
 
 from concurrent import futures
 import grpc
+from grpc_reflection.v1alpha import reflection
 from generated import movenet_pb2
 from generated import movenet_pb2_grpc
 
 class MovenetServer(movenet_pb2_grpc.MovenetServiceServicer):
-    def StreamJointStates(self, request_iterator, context):
+    def StreamJointStates(self, request, context):
         # This is just an example implementation
-        for request in request_iterator:
+        for i in range(10):
             print("Received request")
             yield movenet_pb2.JointStateMessage(
                 header=movenet_pb2.HeaderMessage(
@@ -43,9 +44,17 @@ def main():
     print(grpc.__file__)
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
     movenet_pb2_grpc.add_MovenetServiceServicer_to_server(movenet_pb2_grpc.MovenetServiceServicer(), server)
+
+    # Add reflection
+    SERVICE_NAMES = (
+        movenet_pb2.DESCRIPTOR.services_by_name['MovenetService'].full_name,
+        reflection.SERVICE_NAME,
+    )
+    reflection.enable_server_reflection(SERVICE_NAMES, server)
+
     server.add_insecure_port('[::]:50051')
-    print("Starting MoveNET Server on 127.0.0.1:50051")
     server.start()
+    print("Started MoveNET Server on http://127.0.0.1:50051")
     server.wait_for_termination()
 
 def main2(args=None):

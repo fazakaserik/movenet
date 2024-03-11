@@ -2,6 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
+from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 from . import movenet_pb2 as movenet__pb2
 
 
@@ -14,9 +15,9 @@ class MovenetServiceStub(object):
         Args:
             channel: A grpc.Channel.
         """
-        self.StreamJointStates = channel.stream_stream(
+        self.StreamJointStates = channel.unary_stream(
                 '/movenet.MovenetService/StreamJointStates',
-                request_serializer=movenet__pb2.JointStateRequest.SerializeToString,
+                request_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
                 response_deserializer=movenet__pb2.JointStateMessage.FromString,
                 )
 
@@ -24,7 +25,7 @@ class MovenetServiceStub(object):
 class MovenetServiceServicer(object):
     """Missing associated documentation comment in .proto file."""
 
-    def StreamJointStates(self, request_iterator, context):
+    def StreamJointStates(self, request, context):
         """A server-to-client streaming RPC to stream JointStates
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -34,9 +35,9 @@ class MovenetServiceServicer(object):
 
 def add_MovenetServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'StreamJointStates': grpc.stream_stream_rpc_method_handler(
+            'StreamJointStates': grpc.unary_stream_rpc_method_handler(
                     servicer.StreamJointStates,
-                    request_deserializer=movenet__pb2.JointStateRequest.FromString,
+                    request_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
                     response_serializer=movenet__pb2.JointStateMessage.SerializeToString,
             ),
     }
@@ -50,7 +51,7 @@ class MovenetService(object):
     """Missing associated documentation comment in .proto file."""
 
     @staticmethod
-    def StreamJointStates(request_iterator,
+    def StreamJointStates(request,
             target,
             options=(),
             channel_credentials=None,
@@ -60,8 +61,8 @@ class MovenetService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.stream_stream(request_iterator, target, '/movenet.MovenetService/StreamJointStates',
-            movenet__pb2.JointStateRequest.SerializeToString,
+        return grpc.experimental.unary_stream(request, target, '/movenet.MovenetService/StreamJointStates',
+            google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
             movenet__pb2.JointStateMessage.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

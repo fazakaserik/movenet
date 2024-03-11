@@ -1,3 +1,4 @@
 setuptools
-# grpcio 
-# grpcio-tools
+grpcio 
+grpcio-tools
+grpcio-reflection
