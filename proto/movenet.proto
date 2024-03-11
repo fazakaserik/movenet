@@ -1,30 +1,30 @@
 syntax = "proto3";
 
-package joint_states;
+package movenet;
 
-message Header {
+message JointStateRequest {
+}
+
+message HeaderMessage {
   // Nested message for the ROS2 Time format
-  message Time {
+  message TimeMessage {
     int32 sec = 1;       // Seconds part of the time
     uint32 nanosec = 2;  // Nanoseconds part of the time
   }
 
-  Time stamp = 1;      // Timestamp for the header
+  TimeMessage stamp = 1;      // Timestamp for the header
   string frame_id = 2; // Frame identifier
 }
 
-message JointState {
-  Header header = 1;                // Header containing timestamp and frame_id
+message JointStateMessage {
+  HeaderMessage header = 1;                // Header containing timestamp and frame_id
   repeated string name = 2;         // Names of the joints
   repeated double position = 3;     // Positions of each joint (rad or m)
   repeated double velocity = 4;     // Velocities of each joint (rad/s or m/s)
   repeated double effort = 5;       // Efforts in each joint (Nm or N)
 }
 
-service JointStateService {
+service MovenetService {
   // A server-to-client streaming RPC to stream JointStates
-  rpc StreamJointStates(stream JointStateRequest) returns (stream JointState);
-}
-
-message JointStateRequest {
+  rpc StreamJointStates(stream JointStateRequest) returns (stream JointStateMessage);
 }
