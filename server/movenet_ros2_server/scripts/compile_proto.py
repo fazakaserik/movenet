@@ -53,10 +53,11 @@ def main():
     dir_path = os.path.dirname(os.path.realpath(__file__))
     proto_dir_path = os.path.join(dir_path, "..", "..", "..", "proto")
     proto_file_path = os.path.join(proto_dir_path, "movenet.proto")
+    generated_dir = os.path.join(dir_path, "..", "generated")
 
     proto_file = proto_file_path  # Path to your .proto file
     proto_path = proto_dir_path  # Directory to search for imports
-    output_dir = dir_path  # Where to place the generated files
+    output_dir = generated_dir  # Where to place the generated files
 
     compile_proto(proto_file, proto_path, output_dir)
 

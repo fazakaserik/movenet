@@ -3,10 +3,11 @@ import grpc
 from grpc_reflection.v1alpha import reflection
 from generated import movenet_pb2
 from generated import movenet_pb2_grpc
+import google.protobuf.empty_pb2
 
 class MovenetServer(movenet_pb2_grpc.MovenetServiceServicer):
     def StreamJointStates(self, request, context):
-        # This is just an example implementation
+        # This is just a mock example implementation
         for i in range(10):
             print("Received request")
             yield movenet_pb2.JointStateMessage(
@@ -20,9 +21,24 @@ class MovenetServer(movenet_pb2_grpc.MovenetServiceServicer):
                 effort=[7.313, -5.952, 3.896, -3.589, -5.907, 5.413]
             )
 
+    def Plan(self, request, context):
+        # Mock implementation for Plan
+        print("Planning...")
+        return google.protobuf.empty_pb2.Empty()
+
+    def Execute(self, request, context):
+        # Mock implementation for Execute
+        print("Executing...")
+        return google.protobuf.empty_pb2.Empty()
+
+    def Stop(self, request, context):
+        # Mock implementation for Stop
+        print("Stopping...")
+        return google.protobuf.empty_pb2.Empty()
+
 def start_server(port: int = 50051):
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
-    movenet_pb2_grpc.add_MovenetServiceServicer_to_server(movenet_pb2_grpc.MovenetServiceServicer(), server)
+    movenet_pb2_grpc.add_MovenetServiceServicer_to_server(MovenetServer(), server)
 
     # Add reflection
     SERVICE_NAMES = (

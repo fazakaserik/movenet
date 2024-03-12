@@ -1,3 +1,29 @@
+# Get Started
+
+## MoveNET Server
+### Without ROS2
+If you are **not using ROS2**, the server can be installed via `pip`.
+```
+pip install server/movenet_ros2_server
+```
+Then if the Python installed binaries directory is added to `$PATH`, the console script can be used to start the server.
+```
+start_movenet_server [-h] [--mock] [--port PORT]
+```
+### With ROS2
+If you are **using ROS2**, the server can be built with `colcon`.
+```
+colcon build
+```
+Then sourced. (Replace `.sh` with your own preference.)
+```
+source install/local_setup.sh
+```
+Then start from installed ROS2 package.
+```
+ros2 run movenet_ros2_server start_movenet_server [-h] [--mock] [--port PORT]
+```
+
 # Alkalmazásfejlesztés (VIAUMA09) házi feladat
 
 Alapadatok:

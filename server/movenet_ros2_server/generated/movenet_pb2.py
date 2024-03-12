@@ -15,7 +15,7 @@ _sym_db = _symbol_database.Default()
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\rmovenet.proto\x12\x07movenet\x1a\x1bgoogle/protobuf/empty.proto\"\x13\n\x11JointStateRequest\"\x81\x01\n\rHeaderMessage\x12\x31\n\x05stamp\x18\x01 \x01(\x0b\x32\".movenet.HeaderMessage.TimeMessage\x12\x10\n\x08\x66rame_id\x18\x02 \x01(\t\x1a+\n\x0bTimeMessage\x12\x0b\n\x03sec\x18\x01 \x01(\x05\x12\x0f\n\x07nanosec\x18\x02 \x01(\r\"}\n\x11JointStateMessage\x12&\n\x06header\x18\x01 \x01(\x0b\x32\x16.movenet.HeaderMessage\x12\x0c\n\x04name\x18\x02 \x03(\t\x12\x10\n\x08position\x18\x03 \x03(\x01\x12\x10\n\x08velocity\x18\x04 \x03(\x01\x12\x0e\n\x06\x65\x66\x66ort\x18\x05 \x03(\x01\x32[\n\x0eMovenetService\x12I\n\x11StreamJointStates\x12\x16.google.protobuf.Empty\x1a\x1a.movenet.JointStateMessage0\x01\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\rmovenet.proto\x12\x07movenet\x1a\x1bgoogle/protobuf/empty.proto\"\x13\n\x11JointStateRequest\"\x81\x01\n\rHeaderMessage\x12\x31\n\x05stamp\x18\x01 \x01(\x0b\x32\".movenet.HeaderMessage.TimeMessage\x12\x10\n\x08\x66rame_id\x18\x02 \x01(\t\x1a+\n\x0bTimeMessage\x12\x0b\n\x03sec\x18\x01 \x01(\x05\x12\x0f\n\x07nanosec\x18\x02 \x01(\r\"}\n\x11JointStateMessage\x12&\n\x06header\x18\x01 \x01(\x0b\x32\x16.movenet.HeaderMessage\x12\x0c\n\x04name\x18\x02 \x03(\t\x12\x10\n\x08position\x18\x03 \x03(\x01\x12\x10\n\x08velocity\x18\x04 \x03(\x01\x12\x0e\n\x06\x65\x66\x66ort\x18\x05 \x03(\x01\x32\x86\x02\n\x0eMovenetService\x12I\n\x11StreamJointStates\x12\x16.google.protobuf.Empty\x1a\x1a.movenet.JointStateMessage0\x01\x12\x36\n\x04Plan\x12\x16.google.protobuf.Empty\x1a\x16.google.protobuf.Empty\x12\x39\n\x07\x45xecute\x12\x16.google.protobuf.Empty\x1a\x16.google.protobuf.Empty\x12\x36\n\x04Stop\x12\x16.google.protobuf.Empty\x1a\x16.google.protobuf.Emptyb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -30,6 +30,6 @@ if _descriptor._USE_C_DESCRIPTORS == False:
   _globals['_HEADERMESSAGE_TIMEMESSAGE']._serialized_end=206
   _globals['_JOINTSTATEMESSAGE']._serialized_start=208
   _globals['_JOINTSTATEMESSAGE']._serialized_end=333
-  _globals['_MOVENETSERVICE']._serialized_start=335
-  _globals['_MOVENETSERVICE']._serialized_end=426
+  _globals['_MOVENETSERVICE']._serialized_start=336
+  _globals['_MOVENETSERVICE']._serialized_end=598
 # @@protoc_insertion_point(module_scope)
