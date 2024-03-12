@@ -29,4 +29,9 @@ message JointStateMessage {
 service MovenetService {
   // A server-to-client streaming RPC to stream JointStates
   rpc StreamJointStates(google.protobuf.Empty) returns (stream JointStateMessage);
+
+  // Simulation controls
+  rpc Plan(google.protobuf.Empty) returns (google.protobuf.Empty)
+  rpc Execute(google.protobuf.Empty) returns (google.protobuf.Empty)
+  rpc Stop(google.protobuf.Empty) returns (google.protobuf.Empty)
 }
