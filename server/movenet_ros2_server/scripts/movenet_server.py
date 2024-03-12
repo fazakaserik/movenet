@@ -4,11 +4,15 @@ from rclpy.node import Node
 from std_msgs.msg import String
 from sensor_msgs.msg import JointState
 
+from moveit.planning import MoveItPy
+from moveit_configs_utils import MoveItConfigsBuilder
+
 from concurrent import futures
 import grpc
 from grpc_reflection.v1alpha import reflection
 from generated import movenet_pb2
 from generated import movenet_pb2_grpc
+import google.protobuf.empty_pb2
 
 class MovenetServer(movenet_pb2_grpc.MovenetServiceServicer):
     def StreamJointStates(self, request, context):
@@ -26,6 +30,11 @@ class MovenetServer(movenet_pb2_grpc.MovenetServiceServicer):
                 effort=[7.313, -5.952, 3.896, -3.589, -5.907, 5.413]
             )
 
+    def Plan(self, request, context):
+        # Mock implementation for Plan
+        print("Planning...")
+        return google.protobuf.empty_pb2.Empty()
+
 class MinimalSubscriber(Node):
 
     def __init__(self):
@@ -41,6 +50,10 @@ class MinimalSubscriber(Node):
         self.get_logger().info(f"x={msg.position[0]}\ty={msg.position[1]}\tz={msg.position[2]}")
 
 def start_server(port: int = 50051):
+    moveitpy = MoveItPy()
+    trajactory_execution_manager = moveitpy.get_trajactory_execution_manager()
+    trajactory_execution_manager.execute_and_wait()
+
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
     movenet_pb2_grpc.add_MovenetServiceServicer_to_server(movenet_pb2_grpc.MovenetServiceServicer(), server)
 

@@ -2,8 +2,8 @@ import argparse
 
 def main():
     parser = argparse.ArgumentParser(description='Start the MoveNet ROS2 server.')
-    parser.add_argument('--mock', action='store_true', help='Start the server in mock mode.')
-    parser.add_argument('--port', type=int, help='The port number to run the server on.', default=50051)
+    parser.add_argument('-m', '--mock', action='store_true', help='Start the server in mock mode.')
+    parser.add_argument('-p', '--port', type=int, help='The port number to run the server on.', default=50051)
 
     args = parser.parse_args()
 
